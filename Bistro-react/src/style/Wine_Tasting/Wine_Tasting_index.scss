@@ -1,0 +1,544 @@
+//https://ap-ocshop.myshopify.com/collections/frontpage
+* {
+  font-family: 微軟正黑體;
+  // outline: 1px solid sienna;
+  margin: 0;
+  padding: 0;
+}
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --frame-color: #c8c8c8;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --page-bg: #2d333c;
+  --cate-font: "Trajan";
+  --em: 16;
+}
+
+/* - - - - - - - - - - - - */
+
+/* 左邊的欄位們 */
+#left_menu {
+  height: 100%;
+  margin: 0 auto;
+}
+.left_menu_origin {
+  width: 90%;
+  margin: auto;
+  color: var(--text-color);
+  padding: 0 calc(var(--em) * 0.8px) calc(var(--em) * 0.8px);
+  > ul {
+    // display: block !important;
+    > li {
+      font-size: calc(var(--em) * 1px);
+      padding: calc(var(--em) * 0.5px) 0;
+      border-bottom: dashed 0.5px var(--frame-color);
+      cursor: pointer;
+    }
+  }
+}
+
+.menu_origin_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu_origin_tit > p {
+  display: block;
+  font-family: var(--cate-font);
+  font-size: calc(var(--em) * 2px);
+  margin: 0;
+}
+
+.plus-minus-cate,
+.plus-minus-sort,
+.plus-minus-origin {
+  display: none;
+}
+/* 選擇類別 */
+#left_menu_cate {
+  width: 90%;
+  margin: auto;
+  color: var(--text-color);
+  padding: 0 calc(var(--em) * 0.8px) calc(var(--em) * 0.8px);
+}
+.menu_cate_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu_cate_tit > p {
+  display: block;
+  font-family: var(--cate-font);
+  font-size: calc(var(--em) * 2px);
+  margin: 0;
+}
+#left_menu_cate > ul {
+  list-style: none;
+  margin: 0 auto;
+  cursor: pointer;
+}
+#left_menu_cate > ul > li {
+  font-size: calc(var(--em) * 1px);
+  padding: calc(var(--em) * 0.5px) 0;
+  border-bottom: dashed 0.5px var(--frame-color);
+}
+
+// 第二層分類
+.cate_2se {
+  display: none;
+}
+.cate_2se > ul {
+  list-style: none;
+}
+.cate_2se > ul > li {
+  margin-left: 8px;
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: var(--frame-color);
+}
+
+.origin_2se {
+  display: none;
+}
+.origin_2se > ul {
+  list-style: none;
+}
+.origin_2se > ul > li {
+  margin-left: 8px;
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: var(--frame-color);
+}
+.origin_2se > ul > li:hover {
+  color: var(--text-color);
+}
+
+/* 選擇sort */
+#left_menu_sort {
+  width: 90%;
+  color: var(--text-color);
+  border: solid 1px var(--frame-color);
+  margin: calc(var(--em) * 1px) auto 0 auto;
+  padding: 0 calc(var(--em) * 0.8px) calc(var(--em) * 0.8px);
+}
+.menu_menu_tit > p {
+  display: block;
+  font-family: var(--cate-font);
+  font-size: calc(var(--em) * 2px);
+}
+
+.menu_menu_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* sort 的 checkbox樣式 */
+.sort_option {
+  margin: calc(var(--em) * 1px) 0;
+}
+.sort_option > input[type="checkbox"] {
+  margin: 5px 10px 0 0;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  width: calc(var(--em) * 1px);
+  height: calc(var(--em) * 1px);
+  outline: solid 0.5px var(--frame-color);
+  background-color: transparent;
+}
+.sort_option > input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: relative;
+  bottom: 6px;
+  left: 2px;
+  color: var(--text-color);
+}
+.sort_option > label {
+  padding-left: 15px;
+  margin: 1px 4px !important;
+  cursor: pointer;
+}
+
+#left_menu_price {
+  width: 90%;
+  color: var(--text-color);
+  margin: calc(var(--em) * 2px) auto 0 auto;
+}
+.price-area {
+  margin: calc(var(--em) * 1px) auto 0 auto;
+}
+.price-area > .price-text {
+  font-family: var(--cate-font);
+  font-size: calc(var(--em) * 2px);
+}
+#price-range {
+  border: none;
+  font-size: calc(var(--em) * 1px);
+  font-family: var(--cate-font);
+}
+
+/* - - - - - - - - - - - - */
+/* 選取價錢區間的拉bar條 */
+/* 直接複寫 Material-ui 的 CSS */
+#range-slider {
+  font-family: var(--cate-font);
+}
+.MuiSlider-rail {
+  height: 0.5rem !important;
+  color: var(--frame-color);
+  box-shadow: 0px 0.8px 3px rgb(128, 128, 128) inset;
+  border-radius: 5px !important;
+}
+.MuiSlider-track {
+  color: rgb(100, 100, 100);
+  height: 10px !important ;
+  border-radius: 5px !important;
+}
+.MuiSlider-thumb {
+  width: 18px !important;
+  height: 18px !important;
+  color: var(--frame-color);
+}
+.MuiSlider-thumb.Mui-focusVisible,
+.MuiSlider-thumb:hover {
+  box-shadow: none !important;
+  color: var(--main-orange);
+}
+.MuiSlider-thumb.MuiSlider-active {
+  box-shadow: none !important;
+  color: var(--main-orange);
+}
+
+/* - - - - - - - - - - - - */
+/* 右邊的欄位們 */
+/* 商品 */
+/* 商品圖片外框 */
+.goods_pic {
+  height: 249px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+.goods_pic:hover {
+  border: 2px solid var(--page-bg);
+}
+/* 商品圖片縮放 */
+.goods_pic > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 1s;
+}
+.goods_pic > img:hover {
+  transform: scale(1.2, 1.2);
+  transition: 1s;
+}
+
+/* 商品標題 */
+.goods > p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+/* 商品原價 */
+.price_area > del {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: var(--cate-font);
+}
+/* 商品折價後價格 */
+.price_discount {
+  margin-left: 0.2rem;
+  font-size: 1.2rem;
+  color: var(--text-price);
+  font-family: var(--cate-font);
+}
+/* 商品下方的icon */
+.goods_icon {
+  position: relative;
+  bottom: -20px;
+  transition: 1s;
+  opacity: 0;
+}
+/* icon從下方冒出的動畫 */
+.goods:hover .goods_icon {
+  bottom: 0px;
+  opacity: 1;
+}
+.goods_icon_compare {
+  width: 20px;
+  height: 20px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background-color: var(--main-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goods_icon_compare > img {
+  width: 60%;
+  height: 60%;
+  cursor: pointer;
+}
+
+/* - - - - - - - - - - - - */
+/* 下方分頁按鈕 */
+.page {
+  // 把頁面推開
+  margin: 100px 0;
+}
+.page_num {
+  padding: 8px 10px;
+  margin: 30px 10px;
+  color: var(--main-white);
+  background-color: var(--page-bg);
+  font-family: var(--cate-font);
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.page_num:hover {
+  background-color: var(--main-orange);
+  cursor: pointer;
+}
+
+/* - - - - - - - - - - - -  */
+/* - - - - - RWD - - - - - */
+// max-width: 1199px 991 767 578
+@media (max-width: 991px) {
+  #left_menu {
+    padding: 0;
+  }
+  // 減加icon
+  .plus-cate,
+  .minus-cate,
+  .plus-sort,
+  .minus-sort,
+  .plus-origin,
+  .minus-origin {
+    width: 20px;
+    height: 20px;
+  }
+  .plus-minus-origin,
+  .plus-minus-cate,
+  .plus-minus-sort {
+    display: block;
+  }
+  .minus-origin,
+  .minus-cate,
+  .minus-sort {
+    display: none;
+  }
+  // 左邊類別origin欄
+  .left_menu_origin {
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: 0.5s;
+    width: 100%;
+  }
+  .left_menu_origin > ul {
+    display: none;
+  }
+  .menu_origin_tit {
+    border-bottom: 1px solid var(--frame-color);
+  }
+  // 左邊類別cate欄
+  #left_menu_cate {
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: 0.5s;
+    width: 100%;
+  }
+  #left_menu_cate > ul {
+    display: none;
+  }
+  .menu_cate_tit {
+    border-bottom: 1px solid var(--frame-color);
+  }
+
+  // 左邊SORT欄
+  #left_menu_sort {
+    border: none;
+    cursor: pointer;
+    margin-top: 0;
+    padding: 10px 10px;
+    width: 100%;
+  }
+  .menu_menu_tit {
+    border-bottom: 1px solid var(--frame-color);
+  }
+
+  .sort_option {
+    display: none;
+  }
+  // 價格選擇區間
+  #left_menu_price {
+    width: 100%;
+    margin-top: 0;
+  }
+  .price-area {
+    justify-content: space-between !important;
+    padding: 0 10px 10px;
+  }
+  #price-slider {
+    display: block;
+    margin: auto;
+    width: 80%;
+  }
+  #main-area {
+    margin: auto;
+  }
+  #price-range {
+    font-size: calc(var(--em) * 1.2px);
+  }
+}
+@media (min-width: 992px) {
+  // 強制超過多少寬度就要出現XDDDD
+  #left_menu_cate > ul,
+  .sort_option,
+  .left_menu_origin > ul {
+    display: block !important;
+  }
+}
+
+/* 商品比較 */
+// 打開商品比較頁的按鈕
+.product-compare-add-cart-btn{
+  outline: none;
+  margin: 2px;
+  background: linear-gradient(#ffd36e, var(--main-orange));
+  color: #72431d;
+  border: solid 1.5px var(--main-orange);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+// 打開商品比較頁按鈕旁的商品預覽小圖
+.compare-review{
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid var(--frame-color);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 5px;
+}
+.compare-review > img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+// 商品比較頁最外層的 div
+.product-compare-page-area{
+    display: none;
+}
+// 商品比較頁
+#product-compare-page{
+  width: 60vw;
+  height: 70vh;
+  position: fixed;
+  top: 60%;
+  left: 60%;
+  z-index: 50;
+  transform: translate(-60%,-60%);
+  background-color: #c8c8c8ef;
+  display: flex;
+  padding: 25px;
+  border-radius: 10px;
+}
+// 商品比較頁右上叉叉的按鈕區域
+.icon-cancel-area{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0.5%;
+  top :2%;
+  background-color: transparent;
+  z-index: 60;
+}
+// 商品比較頁右上叉叉圖示
+.icon-cancel{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+// 商品比較頁中的商品區域
+.compare-item{
+  background: white;
+  width: 30vw;
+  height: 100%;
+  padding: 10px;
+  margin:0px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+// 商品比較頁中的商品圖片
+.product-compare-goods_pic{
+  width: 80%;
+  overflow: hidden;
+}
+.product-compare-goods_pic>img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+// 商品比較頁中的加入購物車按鈕
+.product-compare-add-cart-btn>img{
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
+}
+
+/* 商品比較頁中的商品內文 */
+.product-compare-title{
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+.product-compare-type,.product-compare-price,.product-compare-brand{
+  text-align: center;
+  font-size: 16px;
+  margin: 2px;
+}
+.product-compare-price{
+  font-size: 20px;
+  color: var(--text-price);
+}
+
+.main_areacol {
+  .main_arearow {
+    .product-compare {
+      height: 40px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      .product-compare-btn {
+        background-color: transparent;
+        border: 1px solid var(--text-color);
+        cursor: pointer;
+      }
+
+      .product-compare-btn:hover {
+        background-color: var(--main-orange);
+        border: 1px solid var(--main-white);
+        color: var(--main-white);
+        cursor: pointer;
+      }
+
+    }
+  }
+}
+

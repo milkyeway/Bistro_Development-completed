@@ -1,0 +1,274 @@
+* {
+  font-family: "微軟正黑體";
+  // outline: 0.5px solid sienna;
+  margin: 0;
+  padding: 0;
+}
+/* 清除bootstrap 預設的btn按下去後會有藍框 */
+.btn,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  box-shadow: none !important;
+}
+
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --text-color2: #30120b;
+  --frame-color: #c8c8c8;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --main-brown: #61544a;
+  --page-bg: #2d333c;
+  --cate-font: "Trajan";
+  --em: 16;
+}
+
+/* - - - - - - - - - - - - */
+.tasting_detail_picslider_col {
+  /* 麵包屑 */
+  .bread_crumb > img {
+    width: 20px;
+  }
+  .bread_crumb > p {
+    margin: 10px 5px;
+    color: var(--text-color);
+  }
+
+  /* 商品細節照片 */
+  /* 大圖 */
+  #slider_wrap {
+    background-color: #ccc;
+    max-width: 70%;
+    height: 50vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    display: flex;
+  }
+  .slider-cont {
+    height: 50vh;
+    left: 0px;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    transition: 1s;
+  }
+  .slider-cont > li {
+    flex: 1 0 0;
+    height: 50vh;
+    max-width: 70%;
+  }
+  .slider-cont > li > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--main-white);
+  }
+  .preview_area {
+    justify-content: center;
+  }
+  /* 小圖 */  
+  .preview_img {
+    border: 2px solid transparent;
+    border-radius: 2px;
+    width: 50px;
+    height: 50px;
+    margin: 20px 10px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .preview_img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 商品資訊區 */
+  .detail_info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+  }
+  /* 商品資訊區-資訊標題 */
+  .info_title {
+    width: 25%;
+    text-align: right;
+    padding: 10px;
+  }
+  /* 商品資訊區-資訊內容 */
+  .info_des {
+    width: 75%;
+    margin: 15px 5px;
+  }
+  /* 產品原價 & 會員價樣式 */
+  .member_price {
+    margin: 0;
+    display: inline-block;
+    color: var(--text-price);
+    font-family: var(--cate-font);
+    font-weight: bold;
+    font-size: calc(var(--em) * 1.5px);
+  }
+  /* 加入詢價車 */
+  .add_cart_btn {
+    outline: none;
+    width: calc(var(--em) * 12px);
+    background: linear-gradient(#ffd36e, var(--main-orange));
+    color: #72431d;
+    border: solid 1.5px var(--main-orange);
+    font-size: calc(var(--em) * 1.2px);
+    font-weight: 600;
+  }
+  /* 加入詢價車-icon */
+  .add_cart_btn > img {
+    width: 20px;
+    height: 20px;
+    margin-right: calc(var(--em) * 0.5px);
+  }
+  /* 加入最愛-icon */
+  .add_like_btn,
+  .add_like_btn_click {
+    border: solid 1px var(--frame-color);
+    border-radius: 16px;
+  }
+  .add_like_btn > img {
+    width: 20px;
+    height: 20px;
+    margin-right: calc(var(--em) * 0.5px);
+  }
+  .add_like_btn_click > img {
+    width: 20px;
+    height: 20px;
+    margin-right: calc(var(--em) * 0.5px);
+  }
+  .add_like_btn_click {
+    display: none;
+  }
+  /* 分享 */
+  .share_icon > img {
+    width: 30px;
+    margin-right: calc(var(--em) * 0.5px);
+    cursor: pointer;
+  }
+
+  /* 商品簡述標題 & 品牌故事標題 */
+  .goods_description_title,
+  .goods_brand_story_title,
+  .goods_recommend_title {
+    padding: calc(var(--em) * 1px);
+    text-align: center;
+    font-size: calc(var(--em) * 1.2px);
+    border: solid 0.5px var(--frame-color);
+  }
+  .bread_crumb > a > .bread_img {
+    width: 20px;
+    margin: 10px 5px;
+  }
+  /* 商品簡述內文 & 品牌故事內文 */
+  .goods_description,
+  .goods_brand_story {
+    margin: calc(var(--em) * 3px) auto;
+    text-align: justify;
+    line-height: calc(var(--em) * 1.5px);
+    color: var(--text-color);
+    height: 100px;
+  }
+  .goods_brand_story {
+    display: none;
+  }
+  .bg_grey {
+    background-color: var(--frame-color);
+  }
+
+  /* 推薦商品 */
+  .recommend_area {
+    display: flex;
+    /* margin: 0 auto calc(var(--em) * 3px) auto; */
+  }
+  .recommend_item {
+    width: 20%;
+    padding: calc(var(--em) * 1px) 10px;
+  }
+  .recommend_item > p {
+    font-size: calc(var(--em) * 0.9px);
+    text-align: center;
+    margin: 0;
+    padding: calc(var(--em) * 0.5px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+  }
+  .recommend_pic {
+    height: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: solid 2px transparent;
+  }
+  .recommend_pic:hover {
+    border: solid 2px var(--frame-color);
+    border-radius: 3px;
+  }
+  .recommend_pic > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 1s;
+  }
+  .recommend_pic > img:hover {
+    transform: scale(1.2, 1.2);
+    transition: 1s;
+  }
+  .recommend_item > .add_cart_btn {
+    margin-top: 10px;
+    width: 80%;
+  }
+  .recommend_price {
+    margin: 0;
+    display: inline-block;
+    color: var(--text-price);
+    font-family: var(--cate-font);
+    font-weight: bold;
+    font-size: calc(var(--em) * 1.5px);
+  }
+
+  /* ==== RWD ===== */
+  @media (max-width: 991px) {
+    #slider_wrap {
+    }
+    .recommend_area {
+      flex-wrap: wrap;
+    }
+    .recommend_item {
+      width: 50%;
+    }
+    .recommend_item:nth-child(5) {
+      display: none !important;
+    }
+  }
+}
+
+.preview_img1{
+  img{
+    object-fit: contain !important;
+  }
+}
+.slider-cont1{
+    object-fit: contain !important;
+}

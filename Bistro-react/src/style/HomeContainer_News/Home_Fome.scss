@@ -1,0 +1,109 @@
+* {
+  font-family: 微軟正黑體;
+  /* outline: 1px solid sienna; */
+  margin: 0;
+  padding: 0;
+  // outline: 1px solid #ccc;
+}
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-color2: #c5c5c5;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+
+//背景圖
+.Home_Fome_bg {
+  background-image: url(../../images/Rectangle-11.jpg);
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  .Home_Fome_container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .Home_Fome_text {
+      color: var(--main-white);
+      p:nth-child(1),
+      p:nth-child(3) {
+        white-space: nowrap;
+        font-size: 24px;
+        margin: 0;
+      }
+      p:nth-child(2) {
+        font-size: 24px;
+        margin: 0;
+      }
+      p:nth-child(1) {
+        font-size: 40px;
+      }
+    }
+    //icon區域
+    .Home_Fome_icon {
+      .Home_Fome_icon_text {
+        font-size: 30px;
+        margin: 5px;
+        color: var(--main-orange);
+      }
+    }
+    //表單區域
+    .Home_Fome_input {
+      flex-direction: column;
+      .Home_Fome_inputname::placeholder {
+        padding-left: 10px;
+      }
+      label:nth-child(4) {
+        .Home_Fome_inputname {
+          height: 80px;
+          resize: none;
+        }
+      }
+      .Home_Fome_inputname {
+        height: 40px;
+        border: none;
+        border-radius: 6px;
+        background: var(--text-color);
+        outline: none;
+      }
+      //表單按鈕
+      .Home_Fome_input_btn {
+        width: 150px;
+        height: 40px;
+        border-radius: 4px;
+        background: transparent;
+        color: var(--main-orange);
+        outline: none;
+        border: 1px solid var(--main-orange);
+        transition: 0.5s;
+        &:hover {
+          transition: 0.5s;
+          color: var(--main-white);
+          background: var(--main-orange);
+        }
+      }
+    }
+  }
+}
+
+.Home_Fome_textCND{
+  text-transform: lowercase !important;
+  font-family: arial !important;
+}
+
+@media (max-width:991px){
+  .Home_Fome_bg{
+    height: 100vh;
+  }
+}

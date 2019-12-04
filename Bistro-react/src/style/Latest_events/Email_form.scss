@@ -1,0 +1,70 @@
+
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+.ani{
+
+}
+.email_box {
+  button{
+    height: 0;
+  }
+  #email {
+  }
+  input{
+    text-transform:lowercase;
+    background-color: antiquewhite;
+  }
+  textarea{
+    background-color: antiquewhite;
+  }
+  .rodal-close{
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+  }
+  .rodal-dialog.rodal-zoom-enter{
+    input:focus { /*剛開始是display:none和focus相衝 所以用委類加上去*/
+    border: 2px solid #5BC0DE;
+    }
+    overflow: hidden;
+    background-color: #e6a33c;
+    height: 500px !important;
+    padding: 30px ;
+    .submit{
+      text-align: center;
+      border: 0 !important;
+      padding: 0;
+      :hover{
+      background-color: #3b2c25 !important;
+      color: #ffffff;
+      transition: 0.5s;
+      }
+    }
+    .fa-envelope{
+      // background-color: rgb(0, 0, 0);
+      color: #000000;
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+}
+@media only screen and (max-width: 1199px) {
+}

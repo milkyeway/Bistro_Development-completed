@@ -1,0 +1,260 @@
+* {
+  font-family: 微軟正黑體;
+  /* outline: 1px solid sienna; */
+  margin: 0;
+  padding: 0;
+  // outline: 1px solid #ccc;
+}
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+// 與Navber隔開
+.pt-95 {
+  padding-top: 95px;
+}
+.color1 {
+  color: var(--color1);
+}
+.transition_05 {
+  transition: 0.5;
+}
+//底圖
+.Home_Container_LatestArticles_Bg_img {
+  background-image: url(../../images/Layer-78.png);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  //標題文字
+  h3 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: var(--main-white);
+  }
+  //兩邊圖片文字區域
+  .figure_Latest {
+    max-width: 255px;
+    max-height: 170px;
+    margin: 20px 0;
+    overflow: hidden;
+    .figure_Latest_a {
+      max-width: 255px;
+      max-height: 170px;
+      position: relative;
+      .figure_Latest_p {
+        position: absolute;
+        z-index: 33;
+        width: 100%;
+        background: var(--main-black);
+        color: var(--main-white);
+        padding: 4px;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
+      .figure_Latest_img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        transition: 0.5s;
+        &:hover {
+          transition: 0.5s;
+          // transform: scale(1.2);
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  //中間圖片文字區域
+  .LatestArticles_Area2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .M_img {
+      max-width: 540px;
+      height: 553.55px;
+      background: var(--main-white);
+      position: relative;
+      .figure {
+        display: flex;
+        max-width: 450px;
+        height: 284px;
+        overflow: hidden;
+        margin: auto;
+        padding: 0px;
+        transform: translateY(16px);
+        img {
+          transition: 0.5s;
+          width: 100%;
+          margin: auto;
+          height: 284px;
+          &:hover {
+            transform: scale(1.2);
+            transition: 0.5s;
+          }
+        }
+      }
+      .text_region {
+        a {
+          text-decoration: none;
+          position: absolute;
+          bottom: -40px;
+          right: 10px;
+          color: var(--main-black);
+          transition: 0.5s;
+          &:hover {
+            color: var(--main-orange);
+            transition: 0.5s;
+          }
+        }
+      }
+      .figure_text {
+        max-width: 500px;
+        margin: 30px auto;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .Home_Container_LatestArticles_Bg_img {
+    .LatestArticles_Area1 {
+      display: flex;
+      justify-content: center;
+      .figure_Latest {
+        margin: 20px 15px;
+      }
+    }
+    .LatestArticles_Area2 {
+      display: flex;
+      justify-content: center;
+      transform: translateY(15px);
+      .M_img {
+        display: flex;
+        max-width: 800px;
+        height: 250px;
+        margin: 0;
+        .figure {
+          margin-left: 20px;
+          padding: 0;
+          width: 255px;
+          height: 180px;
+          transform: translateY(0);
+          img {
+            margin: 0;
+            background-size: cover;
+          }
+        }
+        .text_region {
+          a {
+            bottom: 0px;
+          }
+        }
+      }
+    }
+    .LatestArticles_Area3 {
+      display: flex;
+      justify-content: center;
+      transform: translateY(30px);
+      .figure_Latest {
+        margin: 20px 15px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .Home_Container_LatestArticles_Bg_img {
+    .LatestArticles_Area1 {
+      .figure_Latest {
+        max-width: 200px;
+      }
+    }
+    .LatestArticles_Area3 {
+      .figure_Latest {
+        max-width: 200px;
+      }
+    }
+    .LatestArticles_Area2 {
+      .M_img {
+        max-width: 600px;
+        height: 250px;
+        position: relative;
+        .figure {
+          width: 255px;
+          height: 180px;
+        }
+      }
+      .figure_text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .Home_Container_LatestArticles_Bg_img {
+    .LatestArticles_Area1 {
+      .figure_Latest:nth-child(3) {
+        display: none;
+      }
+    }
+    .LatestArticles_Area2 {
+      .M_img {
+        width: 430px;
+        height: 250px;
+        .figure {
+          width: 200px;
+          height: 180px;
+          margin: 35px 10px;
+        }
+      }
+      .figure_text {
+        width: 250px;
+        margin: 15px 0;
+      }
+    }
+    .LatestArticles_Area3 {
+      .figure_Latest:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 505px) and(min-width:400) {
+  .Home_Container_LatestArticles_Bg_img {
+    .LatestArticles_Area2 {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,231 @@
+.Home_video_topbg {
+  width: 100%;
+  height:99px;
+  background: var(--main-black);
+  position: relative;
+}
+.Home_video_text_p {
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  object-fit: cover;
+  z-index: 3000;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 18vw;
+  text-transform: uppercase;
+  line-height: 100vh;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  color: #000;
+  opacity: 0;
+}
+.animationIn {
+  animation-name: LoadingHometext;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+}
+.LoadingHometextOut {
+  // animation-name: LoadingHometext;
+  // animation-duration: 3s;
+  // animation-iteration-count: 1;
+  // animation-delay: 3s;
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900");
+.Home_video {
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  object-fit: cover;
+  z-index: -5;
+  p:nth-child(2) {
+  }
+  &::after {
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 827px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    animation-name: LoadingHomeAdmissionbefore; /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 3s; /*動畫持續時間，單位為秒*/
+    animation-delay: 3s; /*動畫延遲開始時間*/
+    animation-iteration-count: 1; /*動畫次數，infinite 為無限次*/
+  }
+  div:nth-child(2) {
+    width: 150% !important;
+    height: 200vh !important;
+    video {
+      width: 150% !important;
+    }
+  }
+}
+.Home_video_images {
+  animation-name: LoadingHome;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 20vw;
+  text-transform: uppercase;
+  line-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 927px;
+  mix-blend-mode: screen;
+  font-weight: 900;
+  z-index: 1;
+  p:nth-child(1) {
+    animation-name: LoadingHome;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    font-family: "Poppins", sans-serif !important;
+    font-size: 20vw;
+    text-transform: uppercase;
+    line-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 927px;
+    mix-blend-mode: screen;
+    font-weight: 900;
+    z-index: 1;
+  }
+}
+.Home_video_text {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 20vw;
+  text-transform: uppercase;
+  line-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 115vh;
+  background: url(../../images/Layer-78.png);
+  mix-blend-mode: screen;
+  font-weight: 900;
+  z-index: 30;
+}
+@keyframes LoadingHomeAdmission {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+//文字動畫
+@keyframes LoadingHometext {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(4);
+  }
+  15% {
+    opacity: 1;
+    -webkit-transform: scale(0.8);
+  }
+  35%{
+
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .Home_video {
+    div:nth-child(2) {
+      width: 250% !important;
+      height: 180vh !important;
+      video {
+        width: 200% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .Home_video {
+    div:nth-child(2) {
+      width: 200% !important;
+      height: 180vh !important;
+      video {
+        width: 200% !important;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .Home_video_topbg {
+    height: 101px;
+  }
+  .Home_video {
+    div:nth-child(2) {
+      width: 250% !important;
+      height: 200vh !important;
+      video {
+        width: 250% !important;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .Home_video {
+    div:nth-child(2) {
+      width: 300% !important;
+      video {
+        width: 350% !important;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 500px) and(max-width:767px) {
+  .Home_video {
+    div:nth-child(2) {
+      height: 210vh !important;
+      width: 360% !important;
+      video {
+        width: 400% !important;
+      }
+    }
+  }
+}

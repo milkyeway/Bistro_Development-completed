@@ -1,0 +1,56 @@
+
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+
+/**********    Dropdown_Button 下拉選單      *************************************************/
+
+.events_dropdown_row {
+  #dropdown-basic-button{
+    background-color: #e6a33c !important;
+  }
+  .dropdown-menu.show a:hover{
+    background-color: #752c1c91;
+  }
+  .dropdown {
+    padding: 20px;
+    // font-weight:700;
+    display: none;
+    .dropdown-toggle {
+      font-weight: 700;
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 1199px) {
+
+}
+@media only screen and (max-width: 991px) {
+    .events_dropdown_row {
+    .dropdown {
+      display: block;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+
+}
+@media only screen and (max-width: 576px) {
+
+}

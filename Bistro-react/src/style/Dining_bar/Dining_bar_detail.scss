@@ -1,0 +1,223 @@
+* {
+  font-family: "微軟正黑體";
+  /* outline: 0.5px solid sienna; */
+  margin: 0;
+  padding: 0;
+}
+
+/* 清除bootstrap 預設的btn按下去後會有藍框 */
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  box-shadow: none;
+}
+
+/* 變數設定 */
+
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --text-color2: #30120b;
+  --frame-color: #c8c8c8;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --main-brown: #61544a;
+  --page-bg: #2d333c;
+  --cate-font: "Trajan";
+  --em: 16;
+}
+
+.canvas {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  min-height: 100vh;
+  width: 41.3%;
+  margin-top: 36px;
+  background: #fff;
+  transition: 0.5s;
+  /* border: 1px solid #000; */
+  top: -12px;
+  box-shadow: 7px 7px 15px rgb(97, 97, 97);
+}
+
+/* - - - - - - - - - - - - */
+
+/* 麵包屑 */
+
+.bread_crumb > img {
+  width: 20px;
+}
+
+.bread_crumb > p {
+  margin: 10px 5px;
+  color: var(--text-color);
+}
+
+/* 商品資訊區 */
+.detail {
+  width: 81%;
+}
+.detail_info {
+  display: flex;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* border-bottom: 1px solid #ccc; */
+  list-style: none;
+}
+
+.detail_info img {
+  margin-right: 20px;
+}
+
+/* 商品資訊區-資訊標題 */
+
+.info_title {
+  width: 25%;
+  text-align: right;
+  padding: 10px;
+}
+
+/* 商品資訊區-資訊內容 */
+
+.info_des {
+  width: 70%;
+  margin: 10px 5px;
+}
+
+/* 時間 */
+
+.react-datepicker .react-datepicker__time-container {
+  width: 130px;
+}
+
+.react-datepicker
+  .react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box {
+  width: 130px;
+}
+
+button.react-datepicker__navigation.react-datepicker__navigation--next {
+  right: 150px;
+}
+
+/* 產品原價 & 會員價樣式 */
+
+.member_price {
+  margin: 0;
+  display: inline-block;
+  color: var(--text-price);
+  font-family: var(--cate-font);
+  font-weight: bold;
+  font-size: calc(var(--em) * 1.5px);
+}
+
+/* 加入詢價車 */
+
+.add_cart_btn {
+  outline: none;
+  width: calc(var(--em) * 12px);
+  background: linear-gradient(#ffd36e, var(--main-orange));
+  color: #72431d;
+  border: solid 1.5px var(--main-orange);
+  font-size: calc(var(--em) * 1.2px);
+  font-weight: 600;
+}
+
+/* 加入詢價車-icon */
+
+.add_cart_btn > img {
+  width: 20px;
+  height: 20px;
+  margin-right: calc(var(--em) * 0.5px);
+}
+
+/* 加入最愛-icon */
+
+.add_like_btn {
+  border: solid 1px var(--frame-color);
+  border-radius: 16px;
+}
+
+.add_like_btn > img {
+  width: 20px;
+  height: 20px;
+  margin-right: calc(var(--em) * 0.5px);
+}
+
+/* 關閉btn */
+
+.close_btn {
+  max-width: 120px;
+  height: 50px;
+  display: flex;
+  margin: 0.5rem;
+  align-items: baseline;
+  background: var(--main-orange);
+  color: var(--text-price);
+  border: 0;
+  padding: 6px 12px !important;
+  p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .canvas {
+    width: 100%;
+    left: 0;
+    /* transform: translateX(); */
+  }
+}
+
+/* 預約時間 */
+
+@media screen and (max-width: 1250px) {
+  .react-datepicker__month-container {
+    clear: left;
+  }
+  button.react-datepicker__navigation.react-datepicker__navigation--next {
+    right: 30px;
+  }
+  .react-datepicker-popper .react-datepicker .react-datepicker__time-container {
+    float: left;
+    width: 100%;
+  }
+  .react-datepicker__time-list {
+    width: 100%;
+  }
+  .react-datepicker-popper {
+    width: 0;
+  }
+}
+
+.Dining_text {
+  width: auto;
+  > h6 {
+    height: 44px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
+.myform {
+  display: flex;
+  flex-direction: column;
+}
+.mr_text {
+  margin-left: 5.1rem !important;
+}
+.mr_text4 {
+  margin-left: 4rem !important;
+}

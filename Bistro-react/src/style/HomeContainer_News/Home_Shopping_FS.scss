@@ -1,0 +1,269 @@
+* {
+  font-family: 微軟正黑體;
+  /* outline: 1px solid sienna; */
+  margin: 0;
+  padding: 0;
+  // outline: 1px solid #ccc;
+}
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+// 與Navber隔開
+.pt-95 {
+}
+//動畫半秒
+.transition_05 {
+  transition: 0.5s;
+}
+//刪除線
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+//對齊
+.justify-content-space-between {
+  justify-content: space-between;
+}
+//背景區塊
+.Home_Shopping_FS_bg {
+  background-image: url(../../images/Wooden.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden;
+  //標題文字
+  .Title_text {
+    transform: translateY(100px);
+    h3 {
+      font-size: 1.5rem;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 900;
+      color: var(--main-white);
+      white-space: nowrap; //不換行
+      letter-spacing: 3px;
+    }
+    .line {
+      transform: translateY(15px);
+      width: 30%;
+      height: 1px;
+      border: 1px solid var(--main-white);
+      margin: 0;
+    }
+  }
+  .Shooping_area {
+    justify-content: space-around;
+    transform: translateY(250px);
+    //SVG區域
+    .Shopping_FS_Block {
+      display: flex;
+      position: relative;
+      .Shopping_FS_svg {
+        max-width: 120px;
+        max-height: 120px;
+        text-align: center;
+        p:nth-child(2) {
+          font-size: 24px;
+          font-weight: 900;
+          white-space: nowrap;
+        }
+        p:nth-child(3) {
+          margin-top: 10px;
+        }
+        p {
+          color: var(--main-white);
+          margin: 0;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .Shopping_FS_text {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        bottom: 50%;
+        right: -50%;
+        p {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          color: var(--main-white);
+          text-align: center;
+          max-width: 30px;
+          max-height: 30px;
+          margin: auto;
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+// --------------------------------------------------------------
+
+//-----------------------------------------------
+@media screen and (max-width: 1199px) {
+  .Home_Shopping_FS_bg {
+    //標題文字
+    .Title_text {
+      .line {
+      }
+    }
+    .Shooping_area {
+      .Shopping_FS_Block:nth-child(1) {
+        transform: translate(170px, -80px);
+        .Shopping_FS_text {
+          transform: translate(40px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(2) {
+        transform: translate(230px, -80px);
+        .Shopping_FS_text {
+          transform: translate(40px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(3) {
+        transform: translate(290px, -80px);
+        .Shopping_FS_text {
+          transform: translate(-390px, 280px) rotate(140deg);
+        }
+      }
+      .Shopping_FS_Block:nth-child(4) {
+        transform: translate(-400px, 280px);
+        .Shopping_FS_text {
+          transform: translate(50px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(5) {
+        transform: translate(-300px, 280px);
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .Home_Shopping_FS_bg {
+    .Shooping_area {
+      .Shopping_FS_Block:nth-child(1) {
+        transform: translate(50px, -80px);
+        .Shopping_FS_text {
+          transform: translate(20px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(2) {
+        transform: translate(130px, -80px);
+        .Shopping_FS_text {
+          transform: translate(20px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(3) {
+        transform: translate(210px, -80px);
+        .Shopping_FS_text {
+          transform: translate(-360px, 280px) rotate(140deg);
+        }
+      }
+      .Shopping_FS_Block:nth-child(4) {
+        transform: translate(-350px, 280px);
+        .Shopping_FS_text {
+          transform: translate(20px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(5) {
+        transform: translate(-250px, 280px);
+      }
+    }
+  }
+}
+@media only screen and(max-width: 767px) {
+  .Home_Shopping_FS_bg {
+    .Shooping_area {
+      .Shopping_FS_Block:nth-child(1) {
+        transform: translate(50px, -80px);
+        .Shopping_FS_text {
+          transform: translate(20px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(2) {
+        transform: translate(130px, -80px);
+        .Shopping_FS_text {
+          transform: translate(20px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(3) {
+        transform: translate(210px, -80px);
+        .Shopping_FS_text {
+          transform: translate(-320px, 280px) rotate(140deg);
+        }
+      }
+      .Shopping_FS_Block:nth-child(4) {
+        transform: translate(-300px, 280px);
+        .Shopping_FS_text {
+          transform: translate(20px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(5) {
+        transform: translate(-200px, 280px);
+      }
+    }
+  }
+}
+@media only screen and(max-width: 576px) {
+  .Home_Shopping_FS_bg {
+    .Shooping_area {
+      .Shopping_FS_Block:nth-child(2),.Shopping_FS_Block:nth-child(5){
+        .Shopping_FS_svg{
+          max-width: 96px;
+        }
+      }
+      .Shopping_FS_Block > .Shopping_FS_svg {
+        p:nth-child(2) {
+          white-space: nowrap;
+        }
+      }
+      .Shopping_FS_Block:nth-child(1) {
+        transform: translate(30px, -80px);
+        .Shopping_FS_text {
+          transform: translate(0);
+        }
+      }
+      .Shopping_FS_Block:nth-child(2) {
+        transform: translate(100px, -80px);
+        .Shopping_FS_text {
+          transform: translate(0);
+        }
+      }
+      .Shopping_FS_Block:nth-child(3) {
+        transform: translate(170px, -80px);
+        .Shopping_FS_text {
+          transform: translate(-250px, 270px) rotate(140deg);
+        }
+      }
+      .Shopping_FS_Block:nth-child(4) {
+        transform: translate(-200px, 280px);
+        .Shopping_FS_text {
+          transform: translate(20px);
+        }
+      }
+      .Shopping_FS_Block:nth-child(5) {
+        transform: translate(-90px, 280px);
+      }
+    }
+  }
+}

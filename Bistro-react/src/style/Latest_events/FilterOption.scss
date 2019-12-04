@@ -1,0 +1,114 @@
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+
+/**********    FilterOption 左邊篩選欄      *************************************************/
+.FilterOption{
+  .form-check{
+    text-align: center;
+    border: #30120b 1px ;
+    width: 100%;
+    &:hover{
+      padding: 0;
+      background-color: #752c1cc7;
+      color: #e6a33c;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .form-check-label:hover{
+      // background-color: #aaa;
+    }
+
+  }
+  // .form-check{
+  //   &:hover{
+  //     border: #30120b 1px ;
+  //   }
+  // }
+
+}
+.form-check-input {
+  margin-top: 0.3rem !important;
+  margin-left: -1.25rem !important;
+}
+.events_FilterOption {
+  z-index: 0;
+  top: 130px;
+  position: sticky;
+  .card {
+    padding: 0;
+    background-color: #752c1c;
+    border: 2px solid #e6a33c;
+    border-radius: 0%;
+    position: relative;
+    // transition: 0.8s;
+    .card-body {
+      padding: 0;
+      max-height: 0;
+      .card-text {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    &:hover .card-body {
+      padding-top: 20px;
+      // display: block;
+      max-height: 300px;
+      // .form-check label{
+      .card-text {
+        transition: 0.8s;
+        visibility: visible;
+        opacity: 1;
+        label:hover {
+          // background-color: #30120b;
+        }
+      }
+      div {
+        display: block;
+        // max-width: 100%;
+        cursor: pointer;
+        label,
+        input {
+          cursor: pointer;
+        }
+      }
+    }
+    .card-header {
+      margin: -1px;
+      font-weight: 700;
+      font-size: 20px;
+      border-radius: 0%;
+      background-color: #752c1c;
+      border-bottom: 1px solid #e6a33c;
+      color: var(--main-white);
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media only screen and (max-width: 991px) {
+  .FilterOption {
+    display: none;
+  }
+}
+
+

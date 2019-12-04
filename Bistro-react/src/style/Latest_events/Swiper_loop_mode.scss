@@ -1,0 +1,107 @@
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+
+/***********    CardRow      *************************************************/
+
+.events_Swiper_Container {
+z-index: -10000000 !important;
+  // margin-bottom: 50px;
+  .slick-arrow.slick-next {
+    // background-color: rgb(207, 21, 21);
+    &::before
+     {
+      margin-right: 50px;
+      content: '\f138' !important;
+      font-size: 30px;
+      color: var(--main-black);
+    }
+  }
+  .slick-arrow.slick-prev {
+    
+    // background-color: rgb(207, 21, 21);
+    &::before
+     {
+      content: '\f137';
+      font-size: 30px;
+      color: var(--main-black);
+    }
+  }
+}
+.swiper_Card_border {
+  margin: 10px;
+z-index: -10000000 !important;
+  &:hover {
+    box-shadow: 10px 10px 10px #61544a;
+    transform: translate(0, -5px);
+    transition: 0.3s;
+  }
+  .card-img-top {
+    max-height: 150px;
+    width: auto;
+  }
+
+  .card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* line-clamp顯示行數 */
+    -webkit-line-clamp: 3;
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      white-space: nowrap;
+      // /* line-clamp顯示行數 */
+      -webkit-line-clamp: 1;
+      font-size: 12px;
+      color: #bdbdbd;
+    }
+  }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 700;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    /* line-clamp顯示行數 */
+    -webkit-line-clamp: 2;
+    // text:bold;
+
+    color: #2d333c;
+    text-decoration: none;
+  }
+
+  .card-body {
+    height: 120px;
+    background-color: rgba(255, 250, 250, 0.411);
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+}
+@media only screen and (max-width: 991px) {
+}
+@media only screen and (max-width: 767px) {
+  .swiper_Card_border {
+    .card-body {
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+}

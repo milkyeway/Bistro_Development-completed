@@ -1,0 +1,24 @@
+.react-date-picker__clear-button {
+  display: none;
+}
+.form-control {
+  background: #e2e2e2 !important;
+}
+#formHorizontalEmail {
+  background: #e2e2e2 !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #e2e2e2 inset; /*淡淡的白*/
+  transition: background-color 5000s ease-in-out 0s; /*透明*/
+  -webkit-text-fill-color: #000000; /*字體顏色*/
+}
+.tab-content>.active{
+  .form-group{
+    .col-form-label{
+      white-space:nowrap; 
+    }
+  }
+}

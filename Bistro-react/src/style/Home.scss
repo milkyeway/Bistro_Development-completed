@@ -1,0 +1,298 @@
+* {
+  font-family: 微軟正黑體;
+  /* outline: 1px solid sienna; */
+  margin: 0;
+  padding: 0;
+  // outline: 1px solid #ccc;
+}
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+// 與Navber隔開
+.pt-108 {
+  padding-top: 108px;
+}
+/* - - - - - - - - - - - - */
+/* 最上方有購物車icon的bar */
+.search_bar_css {
+  width: 0px;
+  height: 32px;
+  border: none;
+  position: relative;
+  // 登入 a 0 8
+  left: 45px;
+  top: 3px;
+  background-color: var(--main-white);
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+/* - - - - - - - - - - - - */
+/* 跟search_bar有關的CSS */
+.opacityture_li {
+  opacity: 1 !important;
+  transition: 0.5s;
+  display: block !important;
+}
+.opacityfalse_li {
+  opacity: 0 !important;
+  transition: 0.5s;
+  display: none !important;
+}
+#nav_top {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 11;
+  background: var(--main-white);
+  width: 100%;
+}
+.search_bar_css:focus {
+  outline: none;
+}
+.search_bar_css::placeholder {
+  color: var(--main-white);
+}
+.magnifier_icon {
+  margin: calc(var(--em) * 0.625px);
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.magnifier_icon:hover {
+  cursor: pointer;
+}
+.nav_top_icon > img {
+  width: 25px;
+  margin: calc(var(--em) * 0.625px);
+}
+.nav_top_icon > a > img {
+  width: 25px;
+  margin: calc(var(--em) * 0.625px);
+}
+.nav_top_icon > p > strong {
+  color: var(--main-orange);
+}
+.chart_money {
+  line-height: 50px;
+  margin: 0;
+}
+
+/* - - - - - - - - - - - - */
+/* 充滿光點的背景banner */
+.nav_bg_img_nav {
+  margin: 0;
+  height: 220px;
+  background-image: url("../images/Homeimages.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* - - - - - - - - - - - - */
+/* Navbar */
+.LogoImages {
+  // background-image: url("../images/logo.png");
+}
+.navberLogo {
+  max-height: 68px;
+  padding: 0;
+  position: fixed;
+  top: 45px;
+  width: 100%;
+  z-index: 99;
+  background: var(--main-black);
+  a {
+    margin: 0;
+    padding: 0;
+    box-sizing: cover;
+    overflow: hidden;
+    .Logo_png {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 300px;
+      height: 150px;
+    }
+    .Logo_svg {
+      width: 100px;
+      height: 54px;
+      display: none;
+    }
+  }
+}
+
+//漢堡選單
+.navbar-toggler {
+  span {
+  }
+}
+button {
+  outline: none !important;
+}
+button.navbar-toggler {
+  border: none !important;
+}
+.cross_click {
+  background-color: transparent;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.cross_line1 {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg) !important;
+  width: 30px;
+  transition-duration: 0.2s;
+}
+.cross_line2 {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg) !important;
+  width: 30px;
+  transition-duration: 0.2s;
+}
+.cross {
+  width: 56px;
+  height: 56px;
+  position: relative;
+  transition-duration: 0.3s;
+  .line1,
+  .line2 {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition-duration: 0.2s;
+  }
+  .line1 {
+    transform: translateX(-50%) translateY(-200%);
+  }
+  .line2 {
+    transform: translateX(-50%) translateY(200%);
+  }
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: none;
+}
+//導覽列項目
+#navbarSupportedContent {
+  ul {
+    display: flex;
+    background: var(--main-blackRgba);
+    .nav-item_li {
+      padding: 1rem 1rem;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      transition: 0.5s;
+      &:hover {
+        transition: 0.5s;
+        background: var(--main-orange);
+      }
+      &:hover a {
+        transition: 0.5s;
+        text-decoration: none;
+        color: var(--color5);
+      }
+      a {
+        transition: 0.5s;
+        display: block;
+        text-align: center;
+        color: var(--main-white);
+        margin: auto 0;
+        font-size: 15px;
+      }
+    }
+    .Sign_in_btn {
+      transition: 0.5s;
+      border: none !important;
+      &:hover {
+        transition: 0.5s;
+        background: var(--main-orange);
+        border-radius: 0%;
+      }
+      .nav-item_li {
+        &:hover {
+          background: transparent;
+        }
+      }
+      &:hover .Sign_in_nav_li > .Sign_in_nav_link {
+        color: var(--color5);
+      }
+      .Sign_in_nav_li {
+        .Sign_in_nav_link {
+          color: var(--main-white);
+        }
+      }
+    }
+  }
+}
+
+//頁尾
+.Home_footer {
+  width: 100%;
+  height: 40px;
+  background: var(--main-black);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  .Home_footer_img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (max-width: 1800px) and (min-width: 1470px) {
+  .Home_footer {
+    height: 70px;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .navberLogo a .Logo_png {
+    display: none;
+  }
+  .navberLogo a .Logo_svg {
+    display: block;
+  }
+}
+@media (max-width: 1034px) {
+  .Logo_svg {
+    width: 80px !important;
+  }
+  .nav-item_li {
+    padding: 1rem 0.6rem;    
+  }
+}
+@media (min-width: 992px) {
+  .cross {
+    max-height: 56px;
+    display: none;
+    width: 100%;
+  }
+}
+
+.cart_item{
+  border-bottom: 1px solid #000000;;
+}

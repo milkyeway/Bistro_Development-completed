@@ -1,0 +1,180 @@
+* {
+  font-family: 微軟正黑體;
+  /* outline: 1px solid sienna; */
+  margin: 0;
+  padding: 0;
+  // outline: 1px solid #ccc;
+}
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+//刪除線
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+//背景區塊
+.Home_Wine_bg {
+  background-image: url(../../images/Rectangle-2-copy.jpg);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  //標題文字
+  h3 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 900;
+  }
+  //酒杯SVG圖
+  .img_wine {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    .Wine_cupimages {
+      text-decoration: none;
+      margin: 0 18px;
+      .wine_svg {
+        width: 32px;
+        height: 50px;
+      }
+      p {
+        color: var(--main-black);
+        margin: 0;
+      }
+    }
+  }
+  // -------------------------------
+  // 酒圖片區塊
+  .wine_region {
+    .wine_figure_border {
+      width: 202px;
+      height: 352px;
+      border: 1px solid var(--text-color);
+      margin: auto;
+      .wine_figure {
+        width: 200px;
+        height: 350px;
+        overflow: hidden;
+        background: var(--main-white);
+        display: flex;
+        justify-content: center;
+        .wine_img {
+          background-size: cover;
+          object-fit: cover;
+          max-width: 100%;
+          height: 100%;
+          transition: 0.5s;
+          &:hover {
+            transform: scale(1.2);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+  .wine_region_2 {
+    width: 200px;
+    p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+      margin: 4px 4px;
+    }
+  }
+  .icon_region {
+    p:nth-child(2) {
+      color: var(--text-price);
+      font-weight: 900;
+    }
+    .icon_figure {
+      width: 22px;
+      height: 24px;
+      background: var(--main-orange);
+      border-radius: 50%;
+      text-align: center;
+      justify-content: center;
+      margin: 0 2px;
+      .icon_bg {
+        transform: translateX(0) translateY(40%);
+        width: 60%;
+        height: 60%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .Home_Wine_bg {
+    .wine_region {
+      .wine_figure_border:nth-child(5) {
+        display: none;
+      }
+      .wine_figure_border {
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .Home_Wine_bg {
+    .wine_region {
+      .wine_figure_border:nth-child(4) {
+        display: none;
+      }
+      .wine_figure_border {
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .Home_Wine_bg {
+    .wine_region {
+      .wine_figure_border:nth-child(3) {
+        display: none;
+      }
+      .wine_figure_border {
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .Home_Wine_bg {
+    .img_wine {
+      .Wine_cupimages:nth-child(8) {
+        display: none;
+      }
+    }
+    .img_wine {
+      a {
+        margin: 0 12px;
+      }
+    }
+    .wine_region {
+      .wine_figure_border:nth-child(2) {
+        display: none;
+      }
+      .wine_figure_border {
+      }
+    }
+  }
+}

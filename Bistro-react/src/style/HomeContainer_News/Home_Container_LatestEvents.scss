@@ -1,0 +1,193 @@
+* {
+  font-family: 微軟正黑體;
+  /* outline: 1px solid sienna; */
+  margin: 0;
+  padding: 0;
+  // outline: 1px solid #ccc;
+}
+/* 變數設定 */
+:root {
+  --color1: #3b2c25;
+  --color2: #61544a;
+  --color3: #2d333c;
+  --color4: #e6a33c;
+  --color5: #30120b;
+  --text-color: #646464;
+  --text-price: #752c1c;
+  --main-orange: #e6a33c;
+  --main-white: #ffffff;
+  --cate-font: "Trajan";
+  --main-black: #000000;
+  --main-blackRgba: #000000c0;
+  --em: 16;
+  --color7: rgb(255, 255, 255);
+}
+// 與Navber隔開
+.pt-95 {
+  padding-top: 95px;
+}
+/* ----------------------------------- */
+// 背景圖片
+.Home_Container_LatestEvents_Bg_img {
+  background-image: url(../../images/Rectangle-2-copy.jpg);
+  width: 100%;
+  height: 120vh;
+
+  h3 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: var(--main-black);
+  }
+  // 圖片限制框
+  .Container_News_figure {
+    overflow: hidden;
+    width: 250px;
+    height: 280px;
+    position: relative;
+    &:hover::before {
+      opacity: 1;
+    }
+    &::before {
+      content: "";
+      width: 250px;
+      height: 280px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: var(--main-blackRgba);
+      z-index: 1;
+      transition: 0.5s;
+      opacity: 0;
+    }
+    .Container_News_img_content {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: -180px;
+      left: 15px;
+      z-index: 5;
+      margin: auto;
+      width: 220px;
+      height: 180px;
+      background: var(--main-blackRgba);
+      transition: 0.5s;
+      h4 {
+        font-size: 1rem;
+        text-align: center;
+        margin: 8px 0;
+        color: var(--main-white);
+      }
+      .Container_News_img_content_btn {
+        width: 100px;
+        margin: 6px auto;
+        color: var(--main-black);
+        background: var(--main-orange);
+        &:hover {
+          background: var(--main-white);
+          color: var(--main-black);
+          transition: 0.5s;
+          span {
+            transition: 0.5s;
+            color: var(--main-orange);
+          }
+        }
+        span {
+          font-size: 16px;
+          letter-spacing: 2px;
+          color: var(--main-white);
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: var(--main-white);
+    }
+    // 圖片底層文字
+    .Container_News_text {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      text-align: center;
+      background: linear-gradient(
+        0deg,
+        rgb(0, 0, 0),
+        rgba(255, 255, 255, 0.342)
+      );
+      color: var(--main-white);
+      width: 100%;
+      height: 40px;
+      position: absolute;
+      bottom: -40px;
+      z-index: 4;
+      transition: 0.5s;
+      overflow: hidden;
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        white-space: nowrap;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+  .Container_News_figure:hover .Container_News_img_content {
+    top: 40px;
+    transition: 0.5s;
+  }
+  .Container_News_figure:hover .Container_News_text {
+    transition: 0.5s;
+    bottom: 0;
+  }
+}
+.mt-5_1,
+.mt-5_2 {
+  margin-top: 3rem;
+}
+// ---------------------------------------------
+@media only screen and (max-width: 1199px) {
+  .mt-5_2 {
+    margin-top: 0 !important;
+    > .p-0 {
+      .Container_News_figure {
+        display: none;
+      }
+    }
+  }
+  .mt-5_1 {
+    .p-0 {
+      margin: 0 5px 30px 5px;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .Home_Container_LatestEvents_Bg_img {
+    .Home_images_area {
+      .p-0:nth-child(3),
+      .p-0:nth-child(4) {
+        margin-bottom: 0px !important;
+        .Container_News_figure {
+          display: none !important;
+        }
+      }
+    }
+    .img_none {
+      display: none;
+      margin-bottom: 0px;
+    }
+  }
+}
+@media only screen and (max-width: 576px) {
+  .img_none {
+    display: none;
+    margin-bottom: 0px;
+  }
+}
