@@ -11,3 +11,12 @@ node-rest-bitro
 
 
 xampp 安裝並開啟 apache MYSQL
+
+在資策會前端工程師養成班中討論小專架構以及大專開發
+
+整個大專開發由7位組員共同開發設計而成
+
+大專影片：https://www.youtube.com/watch?v=45EAjoFliCM
+
+12/6‵
+＊node.js npm i 時出現錯誤，正在調整修改中。
