@@ -18,5 +18,5 @@ xampp 安裝並開啟 apache MYSQL
 
 大專影片：https://www.youtube.com/watch?v=45EAjoFliCM
 
-12/6‵
+12/6
 ＊node.js npm i 時出現錯誤，正在調整修改中。
