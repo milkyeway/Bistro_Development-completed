@@ -35,7 +35,7 @@
 
 ## Members
 
->  [**鄭文傑**](http://handlebarsjs.com/)、  [**陳以十**](http://handlebarsjs.com/)、[**龍思豪**](http://handlebarsjs.com/)、[**謝汶宏**](http://handlebarsjs.com/)、[**謝忞儒**](http://handlebarsjs.com/)、[**顏維德**](http://handlebarsjs.com/)、[**游千慧**](http://handlebarsjs.com/)
+>  [**鄭文傑**](https://github.com/milkyeway)、  [**陳以十**](https://github.com/monkeychen528)、[**龍思豪**](https://github.com/cyruslung)、[**謝汶宏**](http://handlebarsjs.com/)、[**謝忞儒**](http://handlebarsjs.com/)、[**顏維德**](http://handlebarsjs.com/)、[**游千慧**](https://github.com/yuu-chien)
 
 
 
