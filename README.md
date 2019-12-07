@@ -11,6 +11,10 @@
 
     npm i
 
+## SKILLS
+
+<img src="https://images.plurk.com/3u7ZtOljihaPMOh3se9Tjs.png" width="500">
+
 ## GUIDE
 
 - **佐一點美食｜餐酒館預約**
