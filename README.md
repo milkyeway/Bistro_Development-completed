@@ -35,11 +35,11 @@
 - **BISTRO會員中心**
 	> 會員以「登入／註冊」按鈕為始。符合使用直覺的UI設計，即使是初次造訪也能容易被引導至註冊頁面。在進入會員中心後，使用者可以查看與修改個人資料、檢視我的收藏清單、購物訂單、個人紅利、優惠券；此外也設置了提醒系統，如果使用者已購買之票券即將生效／回覆過的文章有新回應的話，系統會發出通知，溫馨提醒使用者。
 
-
+https://github.com/kissyin520
 
 ## Members
 
->  [**鄭文傑**](https://github.com/milkyeway)、  [**陳以十**](https://github.com/monkeychen528)、[**龍思豪**](https://github.com/cyruslung)、[**謝汶宏**](https://github.com/kissyin520)、[**謝忞儒**](https://github.com/Xie1358)、[**顏維德**](https://github.com/st9866101)、[**游千慧**](https://github.com/yuu-chien)
+>  [**鄭文傑**](https://github.com/milkyeway)、  [**陳以十**](https://github.com/monkeychen528)、[**龍思豪**](https://github.com/cyruslung)、[**謝汶宏**](https://github.com/Xie1358)、[**謝忞儒**](https://github.com/kissyin520)、[**顏維德**](https://github.com/st9866101)、[**游千慧**](https://github.com/yuu-chien)
 
 
 
