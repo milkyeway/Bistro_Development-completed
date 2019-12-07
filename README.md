@@ -66,3 +66,5 @@ xampp 安裝並開啟 apache MYSQL
 
 12/6
 ＊node.js npm i 時出現錯誤，正在調整修改中。
+12/7
+＊node.js 修復完畢。
