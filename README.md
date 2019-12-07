@@ -11,6 +11,10 @@
 
     npm i
 
+## SKILLS
+
+<img src="https://images.plurk.com/3u7ZtOljihaPMOh3se9Tjs.png" width="500">
+
 ## GUIDE
 
 - **佐一點美食｜餐酒館預約**
@@ -35,7 +39,7 @@
 
 ## Members
 
->  [**鄭文傑**](https://github.com/milkyeway)、  [**陳以十**](https://github.com/monkeychen528)、[**龍思豪**](https://github.com/cyruslung)、[**謝汶宏**](http://handlebarsjs.com/)、[**謝忞儒**](http://handlebarsjs.com/)、[**顏維德**](http://handlebarsjs.com/)、[**游千慧**](https://github.com/yuu-chien)
+>  [**鄭文傑**](https://github.com/milkyeway)、  [**陳以十**](https://github.com/monkeychen528)、[**龍思豪**](https://github.com/cyruslung)、[**謝汶宏**](https://github.com/kissyin520)、[**謝忞儒**](https://github.com/Xie1358)、[**顏維德**](https://github.com/st9866101)、[**游千慧**](https://github.com/yuu-chien)
 
 
 
