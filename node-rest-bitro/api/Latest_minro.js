@@ -7,8 +7,8 @@ const mysql = require('mysql');
 const bluebird = require('bluebird');
 var db = mysql.createConnection({ // 不是middleware 是全域變數
     host: 'localhost',
-    user: 'root', 
-    password: '', 
+    user: 'YU',
+    password: '1234',
     database: 'bistro'
 });
 db.connect(); 

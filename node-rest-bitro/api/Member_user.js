@@ -6,10 +6,10 @@ const bluebird = require('bluebird');
 //掛件引入mysql
 const mysql = require("mysql");
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "bistro"
+  host: 'localhost',
+  user: 'YU',
+  password: '1234',
+  database: 'bistro'
 });
 db.connect();
 bluebird.promisifyAll(db);
