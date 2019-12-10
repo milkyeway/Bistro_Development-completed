@@ -65,7 +65,7 @@ app.use(require(__dirname + "/api/Blog_index"));      //部落格
 app.use(require(__dirname + "/api/Latest"));      //活動
 app.use(require(__dirname + "/api/DinnerProducts")); //酒吧
 app.use(require(__dirname + "/api/Carts"));       //購物車
-app.use(require(__dirname + "/api/Email"));       //Email
+// app.use(require(__dirname + "/api/Email"));       //Email
 
 app.use(require(__dirname + "/api/order_list_detail_accessories"));      //訂單     
 app.use(require(__dirname + "/api/order_list_detail_activity"));       //訂單    
