@@ -39,7 +39,7 @@
 
 ## Members
 
->  [**鄭文傑**](https://github.com/milkyeway)、  [**陳以十**](https://github.com/monkeychen528)、[**龍思豪**](https://github.com/cyruslung)、[**謝汶宏**]()、[**謝忞儒**](https://github.com/kissyin520)、[**顏維德**](https://github.com/st9866101)、[**游千慧**](https://github.com/yuu-chien)
+>  [**鄭文傑**](https://github.com/milkyeway)、  [**陳以十**](https://github.com/monkeychen528)、[**龍思豪**](https://github.com/cyruslung)、[**謝汶宏**](https://github.com/Xie1358)、[**謝忞儒**](https://github.com/kissyin520)、[**顏維德**](https://github.com/st9866101)、[**游千慧**](https://github.com/yuu-chien)
 
 
 
