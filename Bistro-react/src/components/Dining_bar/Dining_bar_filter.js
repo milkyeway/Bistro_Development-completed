@@ -124,8 +124,8 @@ class Dining_bar_filter extends Component {
             s_service={this.props.s_service}
             service={this.props.service}
           />
+          {/* 地圖toggle顯示 */}
         </div>
-        {/* 地圖toggle顯示 */}
         <FormControl>
           <FormControlLabel
             value="start"

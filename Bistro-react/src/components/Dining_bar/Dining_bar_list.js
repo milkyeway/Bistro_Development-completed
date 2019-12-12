@@ -22,7 +22,7 @@ import { Card, Button } from "react-bootstrap";
 import Dining_bar_detail from "./Dining_bar_detail";
 import Dining_bar_filter from "./Dining_bar_filter";
 import Loading from "./Loading";
-import $ from 'jquery'
+import $ from "jquery";
 
 // import StoreList from "./page/StoreList";
 
@@ -86,7 +86,7 @@ class Dining_bar_list extends Component {
         {
           animation: "",
           idtext: ""
-        },
+        }
         // console.log(this.state.idtext)
       );
     }
@@ -273,7 +273,7 @@ class Dining_bar_list extends Component {
       var water = document.getElementById("water");
       var percent = cnt.innerText;
       var interval;
-      interval = setInterval(function () {
+      interval = setInterval(function() {
         percent++;
         cnt.innerHTML = percent;
         water.style.transform = "translate(0" + "," + (100 - percent) + "%)";
@@ -297,8 +297,8 @@ class Dining_bar_list extends Component {
     let m_filter = document.getElementsByClassName("m_filter")[0];
     let web_filter = document.getElementsByClassName("web-filter")[0];
 
-    $(".filter_btn.btn.btn-primary").hide()
-    $(".icon-cross-area").show()
+    $(".filter_btn.btn.btn-primary").hide();
+    $(".icon-cross-area").show();
 
     // if (this.state.filtertoggle) {
     //   m_filter.style.display = "block";
@@ -443,16 +443,23 @@ class Dining_bar_list extends Component {
     this.setState({ showmap: !this.state.showmap });
   };
 
-
   cross = () => {
-    $(".icon-cross-area").click(function () {
-      console.log("XOXO")
-      $(".filter-wrap").hide()
-      $(this).hide()
-      $(".filter_btn.btn.btn-primary").show()
-    })
+    // $(".icon-cross-area").click(function() { });
+    console.log(this.state.filtertoggle);
+    // $(this).hide();
 
-  }
+    if (this.state.filtertoggle) {
+      $(".filter_btn.btn.btn-primary").show();
+      $(".icon-cross-area").hide();
+      $(".m_filter").hide();
+      this.setState({ filtertoggle: !this.state.filtertoggle });
+    } else {
+      $(".filter_btn.btn.btn-primary").hide();
+      $(".icon-cross-area").show();
+      $(".m_filter").show();
+      this.setState({ filtertoggle: !this.state.filtertoggle });
+    }
+  };
 
   render() {
     let k = 0;
@@ -461,7 +468,7 @@ class Dining_bar_list extends Component {
     return (
       <Router>
         <div className="d-flex filter-wrap">
-          <Button className="filter_btn" onClick={this.showfilter}>
+          <Button className="filter_btn" onClick={this.cross}>
             <img
               className="dining_bar_icon"
               src="images/dining_bar/filter.svg"
@@ -470,7 +477,10 @@ class Dining_bar_list extends Component {
             <span>篩選</span>
           </Button>
           <div className="icon-cross-area" onClick={this.cross}>
-            <img className="icon-cross" src="../images/Wine_Accessories/icon-cancel.png" />
+            <img
+              className="icon-cross"
+              src="../images/Wine_Accessories/icon-cancel.png"
+            />
           </div>
           <Dining_bar_filter
             doFiliter={this.doFiliter}
@@ -537,7 +547,7 @@ class Dining_bar_list extends Component {
               key={k++}
               id="script-loader"
               googleMapsApiKey="AIzaSyAadMvzelzRIjMSAZyGh8UoUpckWI-8Q6w"
-            // {...other props}
+              // {...other props}
             >
               <GoogleMap
                 id="marker-example"
@@ -559,7 +569,7 @@ class Dining_bar_list extends Component {
                       "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"
                   }}
                   minZoom={7}
-                // onClick={this.showInfo}
+                  // onClick={this.showInfo}
                 >
                   {(clusterer) =>
                     this.state.data.map((arr, i) => (
@@ -624,8 +634,8 @@ class Dining_bar_list extends Component {
                                   className="dining_bar_icon"
                                 />
                               ) : (
-                                  ""
-                                )}
+                                ""
+                              )}
                               {arr["西式"] === "1" ? (
                                 <img
                                   alt="西式餐廳"
@@ -633,8 +643,8 @@ class Dining_bar_list extends Component {
                                   className="dining_bar_icon"
                                 />
                               ) : (
-                                  ""
-                                )}
+                                ""
+                              )}
                               {arr["義式"] === "1" ? (
                                 <img
                                   alt="義式餐廳"
@@ -642,8 +652,8 @@ class Dining_bar_list extends Component {
                                   className="dining_bar_icon"
                                 />
                               ) : (
-                                  ""
-                                )}
+                                ""
+                              )}
                               {arr["漢堡店"] === "1" ? (
                                 <img
                                   alt="漢堡店"
@@ -651,8 +661,8 @@ class Dining_bar_list extends Component {
                                   className="dining_bar_icon"
                                 />
                               ) : (
-                                  ""
-                                )}
+                                ""
+                              )}
                               {arr["lounge_bar"] === "1" ? (
                                 <img
                                   alt="lounge_bar"
@@ -660,8 +670,8 @@ class Dining_bar_list extends Component {
                                   className="dining_bar_icon"
                                 />
                               ) : (
-                                  ""
-                                )}
+                                ""
+                              )}
                               {arr["運動酒吧"] === "1" ? (
                                 <img
                                   alt="運動酒吧"
@@ -669,8 +679,8 @@ class Dining_bar_list extends Component {
                                   className="dining_bar_icon"
                                 />
                               ) : (
-                                  ""
-                                )}
+                                ""
+                              )}
                               {arr["夜店舞廳"] === "1" ? (
                                 <img
                                   alt="夜店舞廳"
@@ -678,8 +688,8 @@ class Dining_bar_list extends Component {
                                   className="dining_bar_icon"
                                 />
                               ) : (
-                                  ""
-                                )}
+                                ""
+                              )}
                               {arr["居酒屋"] === "1" ? (
                                 <img
                                   alt="居酒屋"
@@ -687,8 +697,8 @@ class Dining_bar_list extends Component {
                                   className="dining_bar_icon"
                                 />
                               ) : (
-                                  ""
-                                )}
+                                ""
+                              )}
                               {/* <Card.Link href="#" key={arr.sid}>
                                   Card Link
                                 </Card.Link> */}
@@ -718,8 +728,8 @@ class Dining_bar_list extends Component {
               </GoogleMap>
             </LoadScript>
           ) : (
-              ""
-            )}
+            ""
+          )}
         </div>
       </Router>
     );

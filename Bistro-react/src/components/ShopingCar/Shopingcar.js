@@ -42,7 +42,7 @@ const Shopingcar = () => {
   const [accData, setAccData] = useState([]);
   const [acc_id, setAcc_id] = useState(0);
 
-  const fetchData = useCallback(() => {
+  const fetchData = useCallback((sid) => {
     console.log(sid);
     fetch("http://localhost:3000/shopping_cart_detail", {
       method: "POST",
@@ -188,9 +188,9 @@ const Shopingcar = () => {
   // console.log(book);
   // console.log(info);
   // console.log(count);
-  useEffect(() => {
-    fetchData();
-    let sid = parseInt(localStorage.getItem("member_sid")) || 0;
+  let sid = parseInt(localStorage.getItem("member_sid")) || 0;
+  useEffect((sid) => {
+    fetchData(sid);
     // console.log(sid);
   }, [fetchData]);
 
