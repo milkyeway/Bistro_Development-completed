@@ -69,57 +69,6 @@ class Dining_bar_filter extends Component {
 
     return (
       <>
-        {/* 手機板篩選 */}
-        <div className="m_filter">
-          <FormControl className="place_formControl">
-            <InputLabel htmlFor="grouped-native-select">選擇地區</InputLabel>
-            <Select
-              native
-              input={<Input id="grouped-native-select" />}
-              onChange={(event) => this.props.doFiliter(event.target.value)}
-            >
-              {place_arr.map((place, i) => {
-                return (
-                  <option key={i} value={place}>
-                    {place}
-                  </option>
-                );
-              })}
-            </Select>
-          </FormControl>
-          <List dense>
-            {arr.map((value, i) => {
-              const labelId = `aria-labelledby${i}`;
-              return (
-                <ListItem key={value} button>
-                  <ListItemAvatar>
-                    <Avatar alt={`${value}`} src={this.mysrc(value)} />
-                  </ListItemAvatar>
-                  <ListItemText id={labelId} primary={`${value}`} />
-                  <ListItemSecondaryAction>
-                    <Checkbox
-                      edge="end"
-                      onClick={() => this.props.doFiliter(value)}
-                      checked={this.props.type.includes(value) === true}
-                      inputProps={{ "aria-labelledby": `${i}` }}
-                    />
-
-                  </ListItemSecondaryAction>
-                </ListItem>
-              );
-            })}
-          </List>
-          {(this.props.city !== "" || this.props.type.length !== 0) === true ? (
-            <RangeSlider
-              handleChange={this.props.priceFilter}
-              price={this.props.price}
-              s_service={this.props.s_service}
-              service={this.props.service}
-            />
-          ) : (
-            ""
-          )}
-        </div>
         {/* 網頁版篩選 */}
         <div className="web-filter">
           <Dropdown>
@@ -165,6 +114,16 @@ class Dining_bar_filter extends Component {
               </div>
             </ButtonToolbar>
           </>
+        </div>
+
+        {/* 手機板篩選 */}
+        <div className="m_filter">
+          <RangeSlider
+            handleChange={this.props.priceFilter}
+            price={this.props.price}
+            s_service={this.props.s_service}
+            service={this.props.service}
+          />
         </div>
         {/* 地圖toggle顯示 */}
         <FormControl>
