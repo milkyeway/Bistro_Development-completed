@@ -52,7 +52,7 @@ class Dining_bar_detail extends Component {
     // console.log(this.props);
   };
   //加入購物車
-  addCart = (store_name,product_price)=>async (event) => {
+  addCart = (store_name, product_price) => async (event) => {
     event.stopPropagation();
     event.preventDefault();
     // console.log(this.state.startDate);
@@ -85,16 +85,16 @@ class Dining_bar_detail extends Component {
       console.log(json);
       localStorage.setItem("barCart", JSON.stringify(json));
       Swal.fire({
-        title:"已加入購物車！",
-        timer:2000
+        title: "已加入購物車！",
+        timer: 2000
       }).then(
-        function(){},
-        function(dismiss){
-          if(dismiss === "timer"){
+        function() {},
+        function(dismiss) {
+          if (dismiss === "timer") {
             console("I was closed by the timer");
           }
         }
-      )
+      );
 
       if (!response.ok) {
         throw Error(response);
@@ -193,8 +193,8 @@ class Dining_bar_detail extends Component {
                       className="dining_bar_icon"
                     />
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                   {arr["西式"] === "1" ? (
                     <img
                       alt="西式餐廳"
@@ -203,8 +203,8 @@ class Dining_bar_detail extends Component {
                       className="dining_bar_icon"
                     />
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                   {arr["義式"] === "1" ? (
                     <img
                       alt="義式餐廳"
@@ -213,8 +213,8 @@ class Dining_bar_detail extends Component {
                       className="dining_bar_icon"
                     />
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                   {arr["漢堡店"] === "1" ? (
                     <img
                       alt="漢堡店"
@@ -223,8 +223,8 @@ class Dining_bar_detail extends Component {
                       className="dining_bar_icon"
                     />
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                   {arr["lounge_bar"] === "1" ? (
                     <img
                       alt="lounge_bar"
@@ -233,8 +233,8 @@ class Dining_bar_detail extends Component {
                       className="dining_bar_icon"
                     />
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                   {arr["運動酒吧"] === "1" ? (
                     <img
                       alt="運動酒吧"
@@ -243,8 +243,8 @@ class Dining_bar_detail extends Component {
                       className="dining_bar_icon"
                     />
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                   {arr["夜店舞廳"] === "1" ? (
                     <img
                       alt="夜店舞廳"
@@ -253,8 +253,8 @@ class Dining_bar_detail extends Component {
                       className="dining_bar_icon"
                     />
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                   {arr["居酒屋"] === "1" ? (
                     <img
                       alt="居酒屋"
@@ -263,8 +263,8 @@ class Dining_bar_detail extends Component {
                       className="dining_bar_icon"
                     />
                   ) : (
-                      ""
-                    )}
+                    ""
+                  )}
                 </li>
                 <div className="Dining_text">
                   <h6 className="mr_text">營業時間: {this.handleTime(arr)}</h6>
@@ -292,7 +292,6 @@ class Dining_bar_detail extends Component {
                     <option value="3">3位</option>
                     <option value="4">4位</option>
                     <option value="5">5位</option>
-                    <option value="6~10">6~10位</option>
                   </select>
                   {/* </li> */}
                   <li className="detail_info">
@@ -312,12 +311,15 @@ class Dining_bar_detail extends Component {
                     <div className="info_title ml-3 mt-2 mb-2">優惠售價：</div>
                     <div className="info_des">
                       <span className="ml-3">
-                        {/* todo 後端處理好價格後丟出 */}
+                        {arr.how_much}
                         <p className="member_price"></p>
                       </span>
                     </div>
                   </li>
-                  <button className="add_cart_btn mr_text4" onClick={this.addCart(arr.name,arr.how_much)}>
+                  <button
+                    className="add_cart_btn mr_text4"
+                    onClick={this.addCart(arr.name, arr.how_much)}
+                  >
                     加入購物車
                   </button>
                 </form>
