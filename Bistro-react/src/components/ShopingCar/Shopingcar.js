@@ -188,11 +188,15 @@ const Shopingcar = () => {
   // console.log(book);
   // console.log(info);
   // console.log(count);
-  let sid = parseInt(localStorage.getItem("member_sid")) || 0;
-  useEffect((sid) => {
-    fetchData(sid);
+  let sid = parseInt(localStorage.getItem("member_sid")) || null;
+  useEffect(
+    () => {
+      let sid = parseInt(localStorage.getItem("member_sid")) || null;
+      fetchData(sid);
+    },
     // console.log(sid);
-  }, [fetchData]);
+    [fetchData]
+  );
 
   const myTotal = () => {
     // 先把後端跟價格相關的資料撈出
@@ -246,7 +250,7 @@ const Shopingcar = () => {
     console.log(e.target);
   };
 
-  if (sid === false) return "請先登入會員";
+  if (sid === null) return "請先登入會員";
   // console.log(results);
   return (
     <>
