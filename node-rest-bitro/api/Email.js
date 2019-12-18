@@ -9,13 +9,9 @@ const nodemailer = require('nodemailer');
 // 掛件引入mysql
 const mysql = require("mysql");
 const db = mysql.createConnection({
-  // host: '192.168.27.28',
-  // user: 'YU',
-  // password: '1234',
-  // database: 'bistro'
   host: 'localhost',
-  user: 'root',
-  password: '',
+  user: 'YU',
+  password: '1234',
   database: 'bistro'
 });
 db.connect();

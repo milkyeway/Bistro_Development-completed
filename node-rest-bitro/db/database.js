@@ -5,10 +5,10 @@ import mysql from "mysql";
 //但資料表要即時從共用php雲端更新最新資料表，避免出錯
 const pool = mysql.createPool({
   connectionLimit: 10,
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "bistro",
+  host: 'localhost',
+  user: 'YU',
+  password: '1234',
+  database: 'bistro',
   debug: false
 });
 

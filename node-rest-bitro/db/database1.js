@@ -3,8 +3,8 @@ import mysql from 'mysql2'
 // 資料庫連結資訊
 const connection = {
     host: 'localhost',
-    user: 'root',
-    password: '',
+    user: 'YU',
+    password: '1234',
     database: 'bistro',
     waitForConnections: true,
     connectionLimit: 10,

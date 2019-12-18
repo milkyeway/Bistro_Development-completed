@@ -6,10 +6,10 @@ const fs = require("fs"); //寫入檔案
 const bluebird = require("bluebird");
 const db = mysql.createConnection({
   //等同php 的pdo host連線
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "bistro"
+  host: 'localhost',
+  user: 'YU',
+  password: '1234',
+  database: 'bistro'
 });
 bluebird.promisifyAll(db);
 db.connect();
