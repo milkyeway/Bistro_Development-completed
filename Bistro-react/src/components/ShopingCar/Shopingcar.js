@@ -15,11 +15,9 @@ import { set } from "date-fns";
 // import Carousel from '../components/Navigation_Navber/Carousel'
 // import Shoping_store from "./Shoping_store";
 
-let sid = parseInt(localStorage.getItem("member_sid")) || 0;
-console.log(sid);
 const Shopingcar = () => {
   //儲存fetch的member資料
-  const [member, setMember] = useState([]);
+  const [member, setMember] = useState(null);
   const [discount, setDiscount] = useState(0);
   const [usecount, setUsecount] = useState(false);
   //商店的狀態
@@ -44,7 +42,7 @@ const Shopingcar = () => {
   const [accData, setAccData] = useState([]);
   const [acc_id, setAcc_id] = useState(0);
 
-  const fetchData = useCallback(() => {
+  const fetchData = useCallback((sid) => {
     console.log(sid);
     fetch("http://localhost:3000/shopping_cart_detail", {
       method: "POST",
@@ -190,10 +188,15 @@ const Shopingcar = () => {
   // console.log(book);
   // console.log(info);
   // console.log(count);
-  useEffect(() => {
-    fetchData();
-    // console.log(123);
-  }, [fetchData]);
+  let sid = parseInt(localStorage.getItem("member_sid")) || null;
+  useEffect(
+    () => {
+      let sid = parseInt(localStorage.getItem("member_sid")) || null;
+      fetchData(sid);
+    },
+    // console.log(sid);
+    [fetchData]
+  );
 
   const myTotal = () => {
     // 先把後端跟價格相關的資料撈出
@@ -247,13 +250,7 @@ const Shopingcar = () => {
     console.log(e.target);
   };
 
-  if (
-    book.length === 0 &&
-    act_data.length === 0 &&
-    wineData.length === 0 &&
-    accData.length === 0
-  )
-    return "購物車裡沒有資料";
+  if (sid === null) return "請先登入會員";
   // console.log(results);
   return (
     <>
@@ -462,12 +459,11 @@ const Shopingcar = () => {
                           <h6>參加人數</h6>
                         </div>
                         <div>
-                          <h6>  </h6>
+                          <h6> </h6>
                         </div>
                         <div>
                           <h6>價格</h6>
                         </div>
-
                       </div>
                       <div className="product_info d-flex">
                         <div
@@ -497,7 +493,7 @@ const Shopingcar = () => {
                                     display: "block",
                                     "margin-left": "30px"
                                   }}
-                                  onClick={deleteList("act", arr.name)}
+                                  onClick={deleteList("act", arr.activity_name)}
                                 >
                                   &times;
                                 </a>
@@ -607,9 +603,10 @@ const Shopingcar = () => {
                                   ></input>
                                 </div>
                                 <span
-                                 style={{
+                                  style={{
                                     display: "block",
-                                    width: "30%" }}
+                                    width: "30%"
+                                  }}
                                 ></span>
                                 <span
                                   className="woocommerce-Price-amount amount subtotal"
@@ -643,7 +640,7 @@ const Shopingcar = () => {
                           <h6>商品數量</h6>
                         </div>
                         <div>
-                          <h6>  </h6>
+                          <h6> </h6>
                         </div>
                         <div>
                           <h6>價格</h6>
@@ -784,9 +781,10 @@ const Shopingcar = () => {
                                   ></input>
                                 </div>
                                 <span
-                                 style={{
+                                  style={{
                                     display: "block",
-                                    width: "30%" }}
+                                    width: "30%"
+                                  }}
                                 ></span>
                                 <span
                                   className="woocommerce-Price-amount amount subtotal"
@@ -821,7 +819,7 @@ const Shopingcar = () => {
                           <h6>商品數量</h6>
                         </div>
                         <div>
-                          <h6>  </h6>
+                          <h6> </h6>
                         </div>
                         <div>
                           <h6>價格</h6>
@@ -962,9 +960,10 @@ const Shopingcar = () => {
                                   ></input>
                                 </div>
                                 <span
-                                 style={{
+                                  style={{
                                     display: "block",
-                                    width: "30%" }}
+                                    width: "30%"
+                                  }}
                                 ></span>
                                 <span
                                   className="woocommerce-Price-amount amount subtotal"
@@ -1149,7 +1148,10 @@ const Shopingcar = () => {
                             </tr>
                             <tr>
                               <td className="shop_redcart_td">
-                                <button onClick={check_discount} className="shop_redcart">
+                                <button
+                                  onClick={check_discount}
+                                  className="shop_redcart"
+                                >
                                   確認使用紅點
                                 </button>
                                 <small>紅利點數(50元1點)</small>{" "}
