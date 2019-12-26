@@ -10,6 +10,8 @@
 #### Before start . . .
 
     npm i
+注意node-rest-bistro在npm i之後因babel有新舊版差異，所以在裝完之後看到package.json裡的devDependencies，重新npm i @babel/cli @babel/node
+@babel/preset-env這三個檔
 
 ## SKILLS
 
@@ -72,3 +74,7 @@ xampp 安裝並開啟 apache MYSQL
 ＊node.js npm i 時出現錯誤，正在調整修改中。
 12/7
 ＊node.js 修復完畢。
+12/19
+購物車頁面登入登出bug修正
+12/26 
+地圖篩選rwd修正
