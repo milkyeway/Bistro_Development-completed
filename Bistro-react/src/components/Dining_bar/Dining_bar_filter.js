@@ -92,31 +92,74 @@ class Dining_bar_filter extends Component {
             </DropdownButton>
           </Dropdown>
           {/* 標籤button */}
-          <>
-            <ButtonToolbar>
-              <div className="d-flex">
-                {arr.map((value, i) => {
-                  return (
-                    <ToggleButtonGroup key={i} type="checkbox">
-                      <ToggleButton
-                        onClick={() => this.props.doFiliter(`${value}`)}
-                      >
-                        {`${value}`}
-                        <img
-                          alt="日式餐廳"
-                          src={this.mysrc(value)}
-                          className="dining_bar_icon"
-                        />
-                      </ToggleButton>
-                    </ToggleButtonGroup>
-                  );
-                })}
-              </div>
-            </ButtonToolbar>
-          </>
+
+          <ButtonToolbar>
+            <div className="d-flex">
+              {arr.map((value, i) => {
+                return (
+                  <ToggleButtonGroup key={i} type="checkbox">
+                    <ToggleButton
+                      onClick={() => this.props.doFiliter(`${value}`)}
+                    >
+                      {`${value}`}
+                      <img
+                        alt={arr.i}
+                        src={this.mysrc(value)}
+                        className="dining_bar_icon"
+                      />
+                    </ToggleButton>
+                  </ToggleButtonGroup>
+                );
+              })}
+            </div>
+          </ButtonToolbar>
         </div>
 
         {/* 手機板篩選 */}
+        <div className="m_select">
+          <Dropdown>
+            <DropdownButton
+              id="dropdown-basic-button"
+              title={this.props.city ? this.props.city : "選擇地區"}
+            >
+              {place_arr.map((place, i) => {
+                return (
+                  <Dropdown.Item
+                    key={i}
+                    onClick={() => this.props.doFiliter(place)}
+                  >
+                    {place}
+                  </Dropdown.Item>
+                );
+              })}
+              {/* <Dropdown.Item onClick={() => this.props.doFiliter("新北市")}>
+                新北市
+              </Dropdown.Item> */}
+            </DropdownButton>
+          </Dropdown>
+          {/* 標籤button */}
+
+          <ButtonToolbar className="web_type">
+            <div className="d-flex">
+              {arr.map((value, i) => {
+                return (
+                  <ToggleButtonGroup key={i} type="checkbox">
+                    <ToggleButton
+                      onClick={() => this.props.doFiliter(`${value}`)}
+                    >
+                      {`${value}`}
+                      <img
+                        alt="日式餐廳"
+                        src={this.mysrc(value)}
+                        className="dining_bar_icon"
+                      />
+                    </ToggleButton>
+                  </ToggleButtonGroup>
+                );
+              })}
+            </div>
+          </ButtonToolbar>
+        </div>
         <div className="m_filter">
           <RangeSlider
             handleChange={this.props.priceFilter}

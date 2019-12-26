@@ -68,7 +68,6 @@
 /* 打開篩選後的價格與其他需求的最外層DIV  */
 .r_filter_wrap {
   display: flex;
-  justify-content: space-evenly;
   padding: 20px;
   width: 90%;
 }
@@ -209,6 +208,10 @@ label.btn {
 .btn-group-toggle {
 }
 
+.m_select {
+  display: none;
+}
+
 /* 手機篩選的父層 */
 
 .m_filter {
@@ -274,20 +277,25 @@ label.active {
 }
 
 @media screen and (max-width: 1250px) {
+  .web_type {
+    display: none;
+  }
   .btn-toolbar {
-    display: none !important;
+    display: none;
+  }
+  .m_select {
+    display: flex;
+    flex-direction: column;
   }
   .web-filter {
-    #dropdown-basic-button {
-      display: none;
-    }
+    display: none;
   }
   .filter_btn {
     max-width: 100%;
   }
-  /* .filter-wrap {
-    flex-flow: column;
-  } */
+  .r_filter_wrap {
+    flex-direction: column;
+  }
 }
 
 /* 地圖跟店家顯示 */

@@ -200,11 +200,6 @@ class Dining_bar_list extends Component {
   };
   //我的最愛 todo 判斷新增還是刪除改資料表
   love = (event) => {
-    // event.stopPropagation();
-    // console.log(event.target);
-    // console.log(this.state.idtext);
-    // console.log(localStorage.getItem("barLike").includes(this.state.idtext));
-    // const sendlike = () => { };
     let member_sid = localStorage.getItem("member_sid");
     if (member_sid === null) {
       alert("請先登入");
@@ -235,7 +230,6 @@ class Dining_bar_list extends Component {
           }
         });
     }
-    // fetch的網址 /Dining_bar_favorite
   };
   //撈出所有資料跟最愛的店，並存入localstorage
   componentDidMount() {
@@ -448,15 +442,17 @@ class Dining_bar_list extends Component {
     console.log(this.state.filtertoggle);
     // $(this).hide();
 
-    if (this.state.filtertoggle) {
-      $(".filter_btn.btn.btn-primary").show();
+    if (!this.state.filtertoggle) {
+      $(".filter_btn").show();
       $(".icon-cross-area").hide();
       $(".m_filter").hide();
+      $(".web_type").hide()
       this.setState({ filtertoggle: !this.state.filtertoggle });
     } else {
-      $(".filter_btn.btn.btn-primary").hide();
+      $(".filter_btn").hide();
       $(".icon-cross-area").show();
       $(".m_filter").show();
+      $(".web_type").show()
       this.setState({ filtertoggle: !this.state.filtertoggle });
     }
   };
