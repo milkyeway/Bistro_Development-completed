@@ -7,7 +7,7 @@
     "@react-google-maps/api": "^1.7.11",
     "animate.css": "^3.7.2",
     "aos": "^2.3.4",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "chosen-js": "^1.8.7",
     "html-react-parser": "^0.10.0",
